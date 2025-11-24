@@ -61,5 +61,25 @@ public class App {
         System.out.println("Sum: " + allNumber.sum());
         System.out.println("Sum of even numbers: " + evenNumber.sum());
         System.out.println("Sum of odd numbers: " + oddNumber.sum());
+
+        // Payment Card
+        PaymentCard paulsCard = new PaymentCard(20);
+        PaymentCard mattsCard = new PaymentCard(30);
+
+        paulsCard.eatHeartily();
+        mattsCard.eatAffordably();
+        System.out.println("Paul: " + paulsCard);
+        System.out.println("Matt: " + mattsCard);
+
+        paulsCard.addMoney(20);
+        mattsCard.eatHeartily();
+        System.out.println("Paul: " + paulsCard);
+        System.out.println("Matt: " + mattsCard);
+
+        paulsCard.eatAffordably();
+        paulsCard.eatAffordably();
+        mattsCard.addMoney(50);
+        System.out.println("Paul: " + paulsCard);
+        System.out.println("Matt: " + mattsCard);
     }
 }
