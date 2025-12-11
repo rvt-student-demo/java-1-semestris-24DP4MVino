@@ -2,33 +2,69 @@ package rvt;
 
 public class App {
 
-  public static void main (String[] args)
-  {
-    Box box = new Box( 2.5, 5.0, 6.0 );
+    public static void main(String[] args) {
+        // Part 1
+        // CardPayments petesCard = new CardPayments(10);
 
-    System.out.println("Area: " + box.area() + " volume: " + box.volume());
-    System.out.println( "length: " + box.length() + " height: " + box.height() +
-                         " width:  " + box.width());
-    System.out.println();
+        // System.out.println("money " + petesCard.balance());
+        // boolean wasSuccessful = petesCard.takeMoney(8);
+        // System.out.println("successfully withdrew: " + wasSuccessful);
+        // System.out.println("money " + petesCard.balance());
 
-    Box oldBox = new Box(box);
-    System.out.println("Area: " + box.area() + " volume: " + box.volume());
-    System.out.println( "length: " + box.length() + " height: " + box.height() +
-                         " width:  " + box.width());
-    System.out.println();
+        // wasSuccessful = petesCard.takeMoney(4);
+        // System.out.println("successfully withdrew: " + wasSuccessful);
+        // System.out.println("money " + petesCard.balance());
 
-    Box biggerBox = box.biggerBox(box);
-    System.out.println("Area: " + biggerBox.area() + " volume: " + biggerBox.volume());
-    System.out.println( "length: " + biggerBox.length() + " height: " + biggerBox.height() +
-                         " width:  " + biggerBox.width());
-    System.out.println();
+        // Part 2
+        // PaymentTerminal unicafeExactum = new PaymentTerminal();
 
-    Box smallerBox = box.smallerBox(box);
-    System.out.println("Area: " + smallerBox.area() + " volume: " + smallerBox.volume());
-    System.out.println( "length: " + smallerBox.length() + " height: " + smallerBox.height() +
-                         " width:  " + smallerBox.width());
-    System.out.println();
+        // double change = unicafeExactum.eatAffordably(10);
+        // System.out.println("remaining change " + change);
 
-    System.out.println(biggerBox.nests(box));
-  }
+        // change = unicafeExactum.eatAffordably(5);
+        // System.out.println("remaining change " + change);
+
+        // change = unicafeExactum.eatHeartily(4.3);
+        // System.out.println("remaining change " + change);
+
+        // System.out.println(unicafeExactum);
+
+        // Part 3
+        // PaymentTerminal unicafeExactum = new PaymentTerminal();
+
+        // double change = unicafeExactum.eatAffordably(10);
+        // System.out.println("remaining change: " + change);
+
+        // CardPayments annesCard = new CardPayments(7);
+
+        // boolean wasSuccessful = unicafeExactum.eatHeartily(annesCard);
+        // System.out.println("there was enough money: " + wasSuccessful);
+        // wasSuccessful = unicafeExactum.eatHeartily(annesCard);
+        // System.out.println("there was enough money: " + wasSuccessful);
+        // wasSuccessful = unicafeExactum.eatAffordably(annesCard);
+        // System.out.println("there was enough money: " + wasSuccessful);
+
+        // System.out.println(unicafeExactum);
+
+        // Part 4
+        PaymentTerminal unicafeExactum = new PaymentTerminal();
+        System.out.println(unicafeExactum);
+
+        CardPayments annesCard = new CardPayments(2);
+
+        System.out.println("amount of money on the card is " + annesCard.balance() + " euros");
+
+        boolean wasSuccessful = unicafeExactum.eatHeartily(annesCard);
+        System.out.println("there was enough money: " + wasSuccessful);
+
+        unicafeExactum.addMoneyToCard(annesCard, 100);
+
+        wasSuccessful = unicafeExactum.eatHeartily(annesCard);
+        System.out.println("there was enough money: " + wasSuccessful);
+
+        System.out.println("amount of money on the card is " + annesCard.balance() + " euros");
+
+        System.out.println(unicafeExactum);
+
+    }
 }
