@@ -3,68 +3,19 @@ package rvt;
 public class App {
 
     public static void main(String[] args) {
-        // Part 1
-        // CardPayments petesCard = new CardPayments(10);
+        Person ada = new Person("Ada Lovelace", "24 Maddox St. London W1S 2QN", 1200);
+        Person esko = new Person("Esko Ukkonen", "Mannerheimintie 15 00100 Helsinki", 5400);
+        System.out.println(ada);
+        System.out.println(esko);
+        System.out.println();
 
-        // System.out.println("money " + petesCard.balance());
-        // boolean wasSuccessful = petesCard.takeMoney(8);
-        // System.out.println("successfully withdrew: " + wasSuccessful);
-        // System.out.println("money " + petesCard.balance());
-
-        // wasSuccessful = petesCard.takeMoney(4);
-        // System.out.println("successfully withdrew: " + wasSuccessful);
-        // System.out.println("money " + petesCard.balance());
-
-        // Part 2
-        // PaymentTerminal unicafeExactum = new PaymentTerminal();
-
-        // double change = unicafeExactum.eatAffordably(10);
-        // System.out.println("remaining change " + change);
-
-        // change = unicafeExactum.eatAffordably(5);
-        // System.out.println("remaining change " + change);
-
-        // change = unicafeExactum.eatHeartily(4.3);
-        // System.out.println("remaining change " + change);
-
-        // System.out.println(unicafeExactum);
-
-        // Part 3
-        // PaymentTerminal unicafeExactum = new PaymentTerminal();
-
-        // double change = unicafeExactum.eatAffordably(10);
-        // System.out.println("remaining change: " + change);
-
-        // CardPayments annesCard = new CardPayments(7);
-
-        // boolean wasSuccessful = unicafeExactum.eatHeartily(annesCard);
-        // System.out.println("there was enough money: " + wasSuccessful);
-        // wasSuccessful = unicafeExactum.eatHeartily(annesCard);
-        // System.out.println("there was enough money: " + wasSuccessful);
-        // wasSuccessful = unicafeExactum.eatAffordably(annesCard);
-        // System.out.println("there was enough money: " + wasSuccessful);
-
-        // System.out.println(unicafeExactum);
-
-        // Part 4
-        PaymentTerminal unicafeExactum = new PaymentTerminal();
-        System.out.println(unicafeExactum);
-
-        CardPayments annesCard = new CardPayments(2);
-
-        System.out.println("amount of money on the card is " + annesCard.balance() + " euros");
-
-        boolean wasSuccessful = unicafeExactum.eatHeartily(annesCard);
-        System.out.println("there was enough money: " + wasSuccessful);
-
-        unicafeExactum.addMoneyToCard(annesCard, 100);
-
-        wasSuccessful = unicafeExactum.eatHeartily(annesCard);
-        System.out.println("there was enough money: " + wasSuccessful);
-
-        System.out.println("amount of money on the card is " + annesCard.balance() + " euros");
-
-        System.out.println(unicafeExactum);
-
+        Student ollie = new Student("Ollie", "6381 Hollywood Blvd. Los Angeles 90028");
+        
+        int i = 0;
+        while (i < 25) {
+        ollie.study();
+        i = i + 1;
+        }
+        System.out.println(ollie);
     }
 }
