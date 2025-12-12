@@ -1,17 +1,30 @@
 package rvt;
 
+// super class
 public class Person {
     private String name;
-    private String adress;
-    private int salary;
+    private String address;
 
-    public Person(String name, String adress, int salary) {
+    public Person(String name) {
+        this(name, null);
+    }
+
+    public Person(String name, String address) {
         this.name = name;
-        this.adress = adress;
-        this.salary = salary;
+        this.address = address;
+    }
+
+    // other constructors and methods
+
+    public String getName() {
+        return this.name;
+    }
+
+    public String getAddress() {
+        return this.address;
     }
 
     public String toString() {
-        return name + "\n" + "  " + adress + "\n" + "  salary " + salary + " euro/month";
+        return this.name + "\n" + "  " + this.address;
     }
 }

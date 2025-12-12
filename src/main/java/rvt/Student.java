@@ -1,20 +1,15 @@
 package rvt;
 
-public class Student {
-    private String name;
-    private String adress;
+public class Student extends Person {
     private int credits;
-    private int study;
 
     public Student(String name, String adress) {
-        this.name = name;
-        this.adress = adress;
+        super(name, adress);
         credits = 0;
-        study = 0;
     }
 
     public int credits() {
-        return credits;
+        return this.credits;
     }
 
     public int study() {
@@ -22,6 +17,6 @@ public class Student {
     }
 
     public String toString() {
-        return name + "\n" + "  " + adress + "\n" + "  Study credits " + credits;
+        return super.toString() + "\n" + "  Study credits " + credits;
     }
 }
